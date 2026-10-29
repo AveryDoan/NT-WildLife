@@ -83,6 +83,7 @@ struct IdentifyView: View {
                 }
                 .buttonStyle(PrimaryButtonStyle())
                 .disabled(pick == nil || isSaving)
+                .dynamicTypeSize(...DynamicTypeSize.accessibility1)
                 .padding(TFLayout.screenPadding)
                 .background(.bar)
             }
