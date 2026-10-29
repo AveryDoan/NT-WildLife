@@ -88,23 +88,5 @@
     "verified": false,
     "photoCredit": null,
     "isSensitive": false
-  },
-  {
-    "id": "meat-ant",
-    "catalogueNumber": 6,
-    "commonName": "Meat ant",
-    "scientificName": "Iridomyrmex purpureus",
-    "group": "ants",
-    "order": "Hymenoptera",
-    "family": "Formicidae",
-    "habitat": null,
-    "bestSeason": null,
-    "findDifficulty": "easy",
-    "funFact": null,
-    "safetyNote": "Look, don't touch. Meat ants bite and defend their nests aggressively, so keep your distance.",
-    "sourceURL": "https://australian.museum/learn/animals/insects/meat-ant/",
-    "verified": false,
-    "photoCredit": null,
-    "isSensitive": false
   }
 ]

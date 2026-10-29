@@ -30,3 +30,29 @@ public enum Taxon: Equatable, Hashable, Codable, Sendable {
         }
     }
 }
+
+// MARK: - Storage
+
+extension Taxon {
+    /// Flat representation for persistence (SwiftData stores two strings).
+    public var storage: (kind: String, value: String) {
+        switch self {
+        case .species(let id): return ("species", id)
+        case .genus(let name): return ("genus", name)
+        case .family(let name): return ("family", name)
+        case .order(let name): return ("order", name)
+        case .notSure: return ("notSure", "")
+        }
+    }
+
+    public init?(kind: String, value: String) {
+        switch kind {
+        case "species": self = .species(id: value)
+        case "genus": self = .genus(value)
+        case "family": self = .family(value)
+        case "order": self = .order(value)
+        case "notSure": self = .notSure
+        default: return nil
+        }
+    }
+}

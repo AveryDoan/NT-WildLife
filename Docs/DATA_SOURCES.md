@@ -4,7 +4,7 @@ Rule: a species is `verified: true` only when every filled field was checked aga
 Anything we could not read stays empty and the card shows an "Unverified" tag.
 Last checked: 29 Oct 2026.
 
-## Verified (2 of 6 seeded)
+## Verified (2 of 5 seeded)
 
 | Species | Fields confirmed | Source read |
 |---|---|---|
@@ -13,14 +13,22 @@ Last checked: 29 Oct 2026.
 
 `isSensitive` is true for Leichhardt's grasshopper as a cautious app choice (the ALA blog describes it as near-threatened and sparsely distributed). It is not a conservation rating we are publishing.
 
-## Unverified (4 of 6): what is missing
+## Unverified (3 of 5): what is missing
 
 | Species | What we know | What is missing |
 |---|---|---|
 | Green tree ant (*Oecophylla smaragdina*) | Name, family Formicidae, order Hymenoptera confirmed on [ALA](https://bie.ala.org.au/species/Oecophylla+smaragdina). | **Check by hand:** the NT Government fact sheet ([greenants.pdf](https://nt.gov.au/__data/assets/pdf_file/0009/199998/greenants.pdf)) returned 403 to our tools. A search summary says nests are leaves stitched with larval silk, but we have not read the page. No fun fact entered. |
 | Cathedral termite (*Nasutitermes triodiae*) | ALA lists the species as "Spinifex Termite" (search result title only; page returned 404). | **Check by hand:** [termite-homes.pdf](https://nt.gov.au/__data/assets/pdf_file/0003/200001/termite-homes.pdf) (403). Family, order and facts left empty. "Cathedral termite" is the common name from our brief. |
 | Common crow (*Euploea corinna*) | [ALA](https://bie.ala.org.au/species/Euploea+core) treats *Euploea core* as a synonym of *E. corinna* (accepted name "Oleander Butterfly", "Common Crow" is a preferred vernacular). Family Nymphalidae, order Lepidoptera. | The ALA page has no description or distribution. We have not confirmed it occurs in the NT. Other databases may still use *E. core*. |
-| Meat ant (*Iridomyrmex purpureus*) | Name, family Formicidae, order Hymenoptera on [ALA](https://bie.ala.org.au/species/Iridomyrmex+purpureus). The [Australian Museum](https://australian.museum/learn/animals/insects/meat-ant/) says it bites but does not sting, and is "found throughout Australia". | ALA lists the common name as "Southern Meat Ant", which conflicts with "throughout Australia", so NT presence is unconfirmed. An NT Government ant guide describes stinging "meat ants" but appears to mean other species. Fun fact left empty. |
+
+## Dropped
+Meat ant (*Iridomyrmex purpureus*) was removed from the seed on 29 Oct 2026. ALA lists the common name as "Southern Meat Ant" and we could not confirm it occurs in the NT. It can come back if someone verifies NT presence from a page we can read.
+
+## Insect orders (order-level answers)
+`InsectOrder` in TrailCore lists nine orders (Coleoptera, Lepidoptera, Hymenoptera, Blattodea, Orthoptera, Hemiptera, Odonata, Diptera, Mantodea) with plain-English group names. This is standard taxonomy, not an NT claim, and is only used so people can answer "I only know the group". Termites sit inside Blattodea.
+
+## Vision labels (Tier 1 hint)
+The label list was dumped from Apple's Vision `VNClassifyImageRequest` (revision 2, 1303 labels, run on macOS 29 Oct 2026). The insect-related labels that actually exist are: ant, bee, butterfly, dragonfly, insect, ladybug, moth (plus spider, which is not an insect). There is no label for beetle, grasshopper, termite, wasp or fly, so those are never suggested. The app re-checks `supportedIdentifiers()` at run time. This list has not been re-dumped on an iPhone.
 
 ## Not yet researched
 About 19 more species are needed to reach the ~25 target. None are in `species.json` yet.
