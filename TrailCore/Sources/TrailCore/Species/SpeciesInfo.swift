@@ -44,7 +44,7 @@ public enum FindDifficulty: String, Codable, CaseIterable, Sendable {
     case hard
 }
 
-public struct SpeciesInfo: Codable, Equatable, Identifiable, Sendable {
+public struct SpeciesInfo: Codable, Hashable, Identifiable, Sendable {
     public let id: String
     public let catalogueNumber: Int
     public let commonName: String
