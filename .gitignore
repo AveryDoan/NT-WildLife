@@ -5,3 +5,13 @@ DerivedData/
 *.xcuserstate
 xcuserdata/
 *.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Secrets and signing material
+.env
+.env.*
+*.p12
+*.pem
+*.key
+*.mobileprovision
+*.cer
+Secrets.xcconfig
