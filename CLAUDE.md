@@ -56,13 +56,15 @@ Look, don't touch: never encourage catching, handling, baiting or collecting. Wa
 Small commits with clear messages. Git author is `averydoan <harrymystogan@gmail.com>` (set repo-locally; do not touch global config). **No Co-Authored-By or "Generated with Claude" lines in commits or PRs** (the user asked for this on 29 Oct 2026, and their history was rewritten to remove them). No force unwraps, no hard-coded colours, no unlabelled sample data. After each milestone run `swift test` and `xcodebuild build` and report results exactly; mark anything not run (real iPhone, camera, haptics) as "not run". Ask the user at most 3 questions at a time, only when blocked.
 
 ## Status (update at each milestone)
-Last updated: 29 Oct 2026.
+Last updated: 29 Oct 2026 (device run + GitHub).
 - **M1 done.** App target, design system, seed loader, TrailCore scoring tests. 59 TrailCore tests pass.
 - **M2 done (simulator).** Capture (PhotosPicker + camera code path), face check, Identify (Tier 0 + Tier 1), Result with points. Verified in the simulator with generated EXIF-dated photos via the DEBUG launch arguments. Not run: real camera, real photo library picker UI taps, Vision on a real insect photo, a photo containing a real face.
 - **M3 done (simulator).** Field Guide, species detail, To identify shelf, Map with rounded circles, demo data.
 - **M4 done (simulator).** Weekly challenges seeded by ISO week, streaks, 6 badges, local leaderboard. No challenge bonus points (completion is shown only).
 - **M5 partly done.** App icon, dark mode checked, Dynamic Type checked at the largest size on Identify. Not done: full VoiceOver pass on a device, Reduce Motion audit.
 - **M6 in progress.** README, DEMO_SCRIPT, LIMITATIONS written. 
+- **GitHub:** pushed `main` to https://github.com/AveryDoan/NT-WildLife.git on 29 Oct 2026 (remote was empty). .gitignore now also covers secret/signing files.
+- **Real iPhone run: blocked.** No physical iPhone was visible to `xctrace`/`devicectl` (simulators only). Project signing is set (automatic, team DRSPH478HG, `com.avery.trailfield`) but no device build was attempted.
 - Not run anywhere: real iPhone, signing/provisioning, haptics (`sensoryFeedback` is wired), camera.
 - Species data: only 5 seeded; 2 verified (magnetic termite, Leichhardt's grasshopper). Green tree ant and cathedral termite wait for the user to paste NT Government PDF text. Target ~25 species is **not met**.
 - Known gaps: no app-level unit/UI test target; `usesCPUOnly` deprecation warning (simulator-only); "To identify" items can't be re-identified yet.
