@@ -69,6 +69,9 @@ struct TodayView: View {
                         }
                     }
 
+                    ChallengesSection(sightings: sightings)
+                    BadgesSection(sightings: sightings)
+
                     SafetyBanner(message: "Daylight only, on marked tracks. Keep well back from water edges (crocodiles) and never touch insects, snakes or spiders.")
 
                     VStack(alignment: .leading, spacing: 10) {
